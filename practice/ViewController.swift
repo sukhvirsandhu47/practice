@@ -12,7 +12,7 @@ class ViewController: UIViewController {
     @IBOutlet var mapview: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("FOOOOOOOOPPPPPPPY")
+        print("MOOOOOOOOPPPPPPPY")
     
     }
 
