@@ -6,14 +6,15 @@
 //
 
 import UIKit
-
+import MapKit
 class ViewController: UIViewController {
 
+    @IBOutlet var mapview: UIView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        print("FOOOOOOOOPPPPPPPY")
+    
     }
-
 
 }
 
