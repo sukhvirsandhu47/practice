@@ -9,12 +9,23 @@ import UIKit
 import MapKit
 class ViewController: UIViewController {
 
-    @IBOutlet var mapview: UIView!
+    @IBOutlet weak var mkView: MKMapView!
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("MOOOOOOOOPPPPPPPY")
+        let  tap = UITapGestureRecognizer(target: self, action: #selector(setPin(touch:)))
+        mkView.addGestureRecognizer(tap)
+        let x = mkView.annotations(in: mkView)
     
     }
+    @objc func setPin(touch:UITapGestureRecognizer){
+        let point = touch.location(in: mkView)
+        let coordinates = mkView.convert(point, toCoordinateFrom: mkView)
+        let pin = MKPointAnnotation()
+        pin.title = "Hellloooo Girlzz"
+        pin.coordinate = coordinates
+        mkView.addAnnotation(pin)
+    }
+    
 
 }
 
